@@ -22,7 +22,6 @@ class TasksController < ApplicationController
       flash.now[:danger] = 'Task が作成されませんでした'
       render :new
     end
-    end
   end
 
   def edit
