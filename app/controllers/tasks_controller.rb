@@ -12,7 +12,6 @@ class TasksController < ApplicationController
   end
 
   def create
-    def create
     @task = Task.new(task_params)
 
     if @task.save
@@ -48,10 +47,12 @@ class TasksController < ApplicationController
     redirect_to tasks_url
   end
   
+  private
+  
   # Strong Parameter
   def task_params
     params.require(:task).permit(:content)
   end
-  end 
+  
 end 
 
